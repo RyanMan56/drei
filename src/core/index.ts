@@ -69,6 +69,7 @@ export * from './CurveModifier'
 
 // Shaders
 export * from './MeshDistortMaterial'
+export * from './StandardMeshDistortMaterial'
 export * from './MeshWobbleMaterial'
 export * from './MeshReflectorMaterial'
 export * from './PointMaterial'
