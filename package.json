@@ -31,7 +31,7 @@
   "scripts": {
     "prebuild": "rimraf dist && npm run typegen",
     "build": "rollup -c && npm run copy",
-    "prepare": "npm run build && husky install",
+    "prepare": "npm run build",
     "eslint": "eslint --fix .",
     "eslint:ci": "eslint .",
     "prettier": "prettier --check .",
@@ -41,7 +41,7 @@
     "typegen": "tsc --emitDeclarationOnly",
     "storybook": "start-storybook -p 6006",
     "build-storybook": "build-storybook",
-    "copy": "copyfiles package.json README.md LICENSE dist && json -I -f dist/package.json -e \"this.private=false; this.devDependencies=undefined; this.optionalDependencies=undefined; this.scripts=undefined; this.husky=undefined; this.prettier=undefined; this.jest=undefined; this['lint-staged']=undefined;\""
+    "copy": "copyfiles package.json README.md LICENSE dist && json -I -f dist/package.json -e \"this.private=false; this.devDependencies=undefined; this.optionalDependencies=undefined; this.scripts=undefined; this.prettier=undefined; this.jest=undefined; this['lint-staged']=undefined;\""
   },
   "dependencies": {
     "@babel/runtime": "^7.11.2",
@@ -100,7 +100,6 @@
     "eslint-plugin-react": "^7.20.6",
     "eslint-plugin-react-hooks": "^4.1.0",
     "glslify-loader": "^2.0.0",
-    "husky": "^6.0.0",
     "jest": "^26.4.1",
     "json": "^11.0.0",
     "maath": "^0.0.1-alpha.21",
